@@ -9,9 +9,9 @@ public class StatsServiceTest {
     void sumAllSales() {
         StatsService service = new StatsService();
 
-        int[] param = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int actualSum = service.sumAllSales(param);
-        int expectedSum = 180;
+        long[] param = {5000000000L, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actualSum = service.sumAllSales(param);
+        long expectedSum = 5000000172L;
 
         Assertions.assertEquals(expectedSum, actualSum);
     }
@@ -20,9 +20,9 @@ public class StatsServiceTest {
     void midSumSales() {
         StatsService service = new StatsService();
 
-        int[] param = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int actualSum = service.midSumSales(param);
-        int expectedSum = 15;
+        long[] param = {5000000000L, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actualSum = service.midSumSales(param);
+        long expectedSum = 416666681L;
 
         Assertions.assertEquals(expectedSum, actualSum);
     }
@@ -31,9 +31,9 @@ public class StatsServiceTest {
     void maxSales() {
         StatsService service = new StatsService();
 
-        int[] param = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] param = {5000000000L, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int actualSum = service.maxSales(param);
-        int expectedSum = 8;
+        int expectedSum = 1;
 
         Assertions.assertEquals(expectedSum, actualSum);
     }
@@ -42,7 +42,7 @@ public class StatsServiceTest {
     void minSales() {
         StatsService service = new StatsService();
 
-        int[] param = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] param = {5000000000L, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int actualSum = service.minSales(param);
         int expectedSum = 9;
 
@@ -52,10 +52,9 @@ public class StatsServiceTest {
     @Test
     void belowMidSales() {
         StatsService service = new StatsService();
-
-        int[] param = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] param = {5000000000L, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int actualSum = service.belowMidSales(param);
-        int expectedSum = 5;
+        int expectedSum = 11;
 
         Assertions.assertEquals(expectedSum, actualSum);
     }
@@ -64,9 +63,9 @@ public class StatsServiceTest {
     void aboveMidSales() {
         StatsService service = new StatsService();
 
-        int[] param = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] param = new long[]{5000000000L, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int actualSum = service.aboveMidSales(param);
-        int expectedSum = 5;
+        int expectedSum = 1;
 
         Assertions.assertEquals(expectedSum, actualSum);
     }

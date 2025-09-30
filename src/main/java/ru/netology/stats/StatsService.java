@@ -3,25 +3,25 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public int sumAllSales(int[] sales) {
-        int sum = 0;
-        for (int sale : sales) {
+    public long sumAllSales(long[] sales) {
+        long sum = 0;
+        for (long sale : sales) {
             sum += sale;
         }
         return sum;
     }
 
-    public int midSumSales(int[] sales) {
-        int midSum = 0;
-        for (int sale : sales) {
+    public long midSumSales(long[] sales) {
+        long midSum = 0;
+        for (long sale : sales) {
             midSum += sale;
         }
         midSum = midSum / sales.length;
         return midSum;
     }
 
-    public int maxSales(int[] sales) {
-        int maxSales = 0;
+    public int maxSales(long[] sales) {
+        long maxSales = 0;
         int numberMonth = 0;
         for (int t = 0; t < sales.length; t++) {
             if (maxSales <= sales[t]) {
@@ -32,8 +32,8 @@ public class StatsService {
         return numberMonth;
     }
 
-    public int minSales(int[] sales) {
-        int maxSales = sales[0];
+    public int minSales(long[] sales) {
+        long maxSales = sales[0];
         int numberMonth = 0;
         for (int t = 0; t < sales.length; t++) {
             if (maxSales >= sales[t]) {
@@ -44,12 +44,12 @@ public class StatsService {
         return numberMonth;
     }
 
-    public int belowMidSales(int[] sales) {
-        int midSum;
+    public int belowMidSales(long[] sales) {
+        long midSum;
         int count = 0;
         midSum = midSumSales(sales);
 
-        for (int sale : sales) {
+        for (long sale : sales) {
             if (midSum > sale) {
                 count++;
             }
@@ -57,12 +57,12 @@ public class StatsService {
         return count;
     }
 
-    public int aboveMidSales(int[] sales) {
-        int midSum;
+    public int aboveMidSales(long[] sales) {
+        long midSum;
         int count = 0;
         midSum = midSumSales(sales);
 
-        for (int sale : sales) {
+        for (long sale : sales) {
             if (midSum < sale) {
                 count++;
             }
